@@ -1,0 +1,18 @@
+# VARIABLES
+@hostname = localhost
+@port = 7008
+@host = https://{{hostname}}:{{port}}
+@contentType = application/json
+@charset = utf-8
+
+### Get a news by Id
+GET {{host}}/api/v1/news/6160a62de4b0cc44c50c9554 HTTP/2.0
+Accept: {{contentType}}
+Accept-Charset: {{charset}}
+If-Modified-Since: Fri, 17 Mar 2023 18:26:52 GMT
+
+### List all news by filters
+GET {{host}}/api/v1/news?pageNumber=1&pageSize=10 HTTP/2.0
+Accept: {{contentType}}
+Accept-Charset: {{charset}}
+If-Modified-Since: Fri, 17 Mar 2023 18:29:38 GMT
